@@ -1,8 +1,7 @@
 package App.repository;
 
-import App.domain.Branch;
-import App.domain.Courier;
-import App.domain.Delivery;
+import App.model.Courier;
+import App.model.Delivery;
 
 import java.util.*;
 import org.springframework.stereotype.Repository;
@@ -33,10 +32,10 @@ public class CourierRepositoryStubImpl implements CourierRepository {
     }
 
     @Override
-    public Courier getById(UUID id) {
+    public Courier getById(Integer id) {
         Courier finded = null;
         for(Courier test : source){
-            if((test.getUuid() == id)){
+            if((test.getId() == id)){
                 finded = test;
 
                 break;

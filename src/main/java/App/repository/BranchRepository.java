@@ -1,6 +1,6 @@
 package App.repository;
 
-import App.domain.Branch;
+import App.model.Branch;
 
 import java.util.List;
 

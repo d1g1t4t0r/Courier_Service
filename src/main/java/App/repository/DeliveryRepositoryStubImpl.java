@@ -1,12 +1,10 @@
 package App.repository;
 
-import App.domain.Delivery;
-import App.domain.Letter;
+import App.model.Delivery;
 import org.springframework.stereotype.Repository;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.UUID;
 
 @Repository
 public class DeliveryRepositoryStubImpl implements DeliveryRepository{
@@ -17,10 +15,10 @@ public class DeliveryRepositoryStubImpl implements DeliveryRepository{
     }
 
     @Override
-    public Delivery getByID(UUID id) {
+    public Delivery getByID(Integer id) {
         Delivery finded = null;
         for(Delivery test : source){
-            if((test.getUuid() == id)){
+            if((test.getId() == id)){
                 finded = test;
 
                 break;

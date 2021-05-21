@@ -1,13 +1,11 @@
 package App.repository;
 
-import App.domain.Delivery;
-import App.domain.Letter;
+import App.model.Delivery;
 
 import java.util.List;
-import java.util.UUID;
 
 public interface DeliveryRepository {
     List<Delivery> getAll();
-    Delivery getByID(UUID id);
+    Delivery getByID(Integer id);
     Delivery getByStatus(boolean delivered);
 }

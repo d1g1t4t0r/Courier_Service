@@ -1,13 +1,12 @@
 package App.repository;
 
-import App.domain.Courier;
+import App.model.Courier;
 
 import java.util.List;
-import java.util.UUID;
 
 public interface CourierRepository {
     List<Courier> getAll();
-    Courier getById(UUID id);
+    Courier getById(Integer id);
     Courier getByName(String name);
     Courier getByHomeBranch(int index);
 }

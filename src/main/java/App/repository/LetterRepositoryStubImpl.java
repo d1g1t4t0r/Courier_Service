@@ -1,11 +1,9 @@
 package App.repository;
-import App.domain.Courier;
-import App.domain.Letter;
+import App.model.Letter;
 import org.springframework.stereotype.Repository;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.UUID;
 
 @Repository
 
@@ -18,10 +16,10 @@ public class LetterRepositoryStubImpl implements LetterRepository {
     }
 
     @Override
-    public Letter getByStartID(UUID id) {
+    public Letter getByStartID(Integer id) {
         Letter finded = null;
         for(Letter test : source){
-            if((test.getStart().getUuid() == id)){
+            if((test.getStart().getId() == id)){
                 finded = test;
 
                 break;
@@ -32,10 +30,10 @@ public class LetterRepositoryStubImpl implements LetterRepository {
     }
 
     @Override
-    public Letter getByFinishID(UUID id) {
+    public Letter getByFinishID(Integer id) {
         Letter finded = null;
         for(Letter test : source){
-            if((test.getFinish().getUuid() == id)){
+            if((test.getFinish().getId() == id)){
                 finded = test;
 
                 break;

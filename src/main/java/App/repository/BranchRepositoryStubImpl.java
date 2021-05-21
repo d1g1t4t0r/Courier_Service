@@ -1,10 +1,7 @@
 package App.repository;
 
-import App.domain.Branch;
-import App.domain.Courier;
-import App.domain.Letter;
+import App.model.Branch;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import org.springframework.stereotype.Repository;

@@ -1,13 +1,9 @@
 package App.services;
 
 
-import App.domain.Branch;
-import App.domain.Courier;
-import App.domain.Delivery;
-import App.domain.Letter;
+import App.model.Branch;
+import App.model.Courier;
 import App.repository.*;
-
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
