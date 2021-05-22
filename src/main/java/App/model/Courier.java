@@ -31,6 +31,10 @@ public class Courier
     @JoinColumn(name = "next_branch_id")
     private Branch next_branch;
 
+    public  Courier (){
+
+    }
+
     public Courier (String name, int home_branch, List<Delivery> deliveries) {
         this.name = name;
         this.home_branch_index = home_branch;

@@ -19,8 +19,9 @@ public class Branch
     @Column(name = "address")
     private String address;
 
+    public  Branch (){
 
-
+    }
     public Branch (String name, String address) {
         this.name = name;
         this.address = address;

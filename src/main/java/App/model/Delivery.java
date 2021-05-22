@@ -38,6 +38,10 @@ public class Delivery {
         this.delivered = delivered;
     }
 
+    public  Delivery (){
+
+    }
+
     public Branch getCurrent() {
         return current;
     }

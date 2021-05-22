@@ -25,9 +25,13 @@ public class Letter {
 
 
     public Letter (Branch start, Branch finish, int urgency) {
-        start = this.start;
-        finish = this.finish;
-        urgency = this.urgency;
+        this.start = start;
+        this.finish= finish;
+        this.urgency=urgency;
+    }
+
+    public  Letter (){
+
     }
 
     public Branch getStart() {
