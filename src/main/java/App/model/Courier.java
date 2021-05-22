@@ -17,7 +17,7 @@ public class Courier
     @Column(name = "name")
     private String name;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "couriers")
+    @OneToMany(fetch = FetchType.LAZY)
     private List<Delivery> deliveries;
 
     @Column(name = "address")

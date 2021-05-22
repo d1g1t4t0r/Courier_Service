@@ -10,11 +10,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan(
-        basePackageClasses = {DayService.class,
-                ApplicationConfig.class,
-                BranchRepository.class,
-                CourierRepository.class})
+@ComponentScan(basePackages = "App")
 public class Application {
 
     public static void main(String[] args){

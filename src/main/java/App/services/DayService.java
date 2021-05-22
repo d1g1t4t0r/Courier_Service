@@ -26,11 +26,11 @@ public class DayService {
                 System.out.println(Libs.Int_To_Time.getTime(i));
             }
         }
-        for(Branch b: branchRepository.getAll()) {
+        /*for(Branch b: branchRepository.getAll()) {
             System.out.println(b);
         }
         for(Courier c: courierRepository.getAll()) {
             System.out.println(c);
-        }
+        }*/
     }
 }
