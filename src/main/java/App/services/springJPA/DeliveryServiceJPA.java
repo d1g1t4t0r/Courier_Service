@@ -6,6 +6,7 @@ import App.dto.LetterDto;
 import App.model.Branch;
 import App.model.Delivery;
 import App.model.Letter;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
@@ -14,6 +15,7 @@ import javax.persistence.TypedQuery;
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
 public class DeliveryServiceJPA {
     @PersistenceContext
     private EntityManager em;

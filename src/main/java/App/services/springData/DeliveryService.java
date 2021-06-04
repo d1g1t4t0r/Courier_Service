@@ -10,11 +10,13 @@ import App.repository.BranchRepository;
 import App.repository.DeliveryRepository;
 import App.repository.LetterRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class DeliveryService {
     @Autowired
     private DeliveryRepository deliveryRepository;

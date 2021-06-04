@@ -11,7 +11,7 @@ import java.util.Optional;
 @Repository
 public interface CourierRepository extends CrudRepository<Courier, Integer> {
     List<Courier> findAll();
-    Optional<Courier> getById(Integer id);
+    /*Optional<Courier> getById(Integer id);
     Optional<Courier> getByName(String name);
-    List<Courier> getByHomeBranch(int index);
+    List<Courier> getByHomeBranch(int index);*/
 }
