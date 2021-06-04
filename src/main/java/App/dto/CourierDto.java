@@ -21,9 +21,9 @@ public class CourierDto
 
     private int home_branch_index;
 
-    private Branch prev_branch;
+    private BranchDto prev_branch;
 
-    private Branch next_branch;
+    private BranchDto next_branch;
 
     public CourierDto(String name, int home_branch, List<DeliveryDto> deliveries) {
         this.name = name;
@@ -31,6 +31,19 @@ public class CourierDto
         this.deliveries = deliveries;
         prev_branch = null;
         next_branch = null;
+    }
+
+    public CourierDto(String name, int home_branch, List<Delivery> deliveries, Branch prev, Branch next) {
+        this.name = name;
+        this.home_branch_index = home_branch;
+        List<DeliveryDto> deliveryDtos = new ArrayList<>();
+
+        for (int i = 0; i<deliveries.size(); i++) {
+            deliveryDtos.add(new DeliveryDto(deliveries.get(i)));
+        }
+        this.deliveries = deliveryDtos;
+        prev_branch = new BranchDto(prev);
+        next_branch = new BranchDto(next);
     }
 
     public CourierDto(Courier courier) {
@@ -44,8 +57,8 @@ public class CourierDto
         }
         this.deliveries = deliveryDtos;
 
-        prev_branch = null;
-        next_branch = null;
+        prev_branch = new BranchDto(courier.getPrev_branch());
+        next_branch = new BranchDto(courier.getNext_branch());
     }
 
     public String getName() {
@@ -60,6 +73,7 @@ public class CourierDto
         return deliveries;
     }
 
+
     public void setDeliveries(List<DeliveryDto> deliveries) {
         this.deliveries = deliveries;
     }
@@ -72,19 +86,19 @@ public class CourierDto
         this.home_branch_index = home_branch_index;
     }
 
-    public Branch getPrev_branch() {
+    public BranchDto getPrev_branch() {
         return prev_branch;
     }
 
-    public void setPrev_branch(Branch prev_branch) {
+    public void setPrev_branch(BranchDto prev_branch) {
         this.prev_branch = prev_branch;
     }
 
-    public Branch getNext_branch() {
+    public BranchDto getNext_branch() {
         return next_branch;
     }
 
-    public void setNext_branch(Branch next_branch) {
+    public void setNext_branch(BranchDto next_branch) {
         this.next_branch = next_branch;
     }
 

@@ -57,11 +57,11 @@ public class ApplicationConfig {
 
     private Properties hibernateProperties() {
         Properties hibernateProperties = new Properties();
-      /*  hibernateProperties.setProperty(
-                "hibernate.hbm2ddl.auto", "none");*/
-        //generate tables from entities
         hibernateProperties.setProperty(
-                "hibernate.hbm2ddl.auto", "create-drop");
+                "hibernate.hbm2ddl.auto", "none");
+        //generate tables from entities
+       /* hibernateProperties.setProperty(
+                "hibernate.hbm2ddl.auto", "create-drop");*/
         hibernateProperties.setProperty(
                 "hibernate.dialect", "org.hibernate.dialect.PostgreSQL94Dialect");
         hibernateProperties.setProperty(

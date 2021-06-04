@@ -42,6 +42,13 @@ public class Courier
         prev_branch = null;
         next_branch = null;
     }
+    public Courier (String name, int home_branch, List<Delivery> deliveries, Branch prev, Branch next) {
+        this.name = name;
+        this.home_branch_index = home_branch;
+        this.deliveries = deliveries;
+        prev_branch = prev;
+        next_branch = next;
+    }
 
     public String getName() {
         return name;

@@ -59,7 +59,7 @@ public class LetterDto {
         return "Letter{" +
                 ", start_branch='" + start + '\'' +
                 ", finish_branch=" + finish +
-                ", urgency="+
+                ", urgency= "+ urgency +
                 '}';
     }
 }

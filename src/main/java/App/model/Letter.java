@@ -82,7 +82,7 @@ public class Letter {
                 "id=" + id +
                 ", start_branch='" + start + '\'' +
                 ", finish_branch=" + finish +
-                ", urgency="+
+                ", urgency="+ urgency +
                 '}';
     }
 }
